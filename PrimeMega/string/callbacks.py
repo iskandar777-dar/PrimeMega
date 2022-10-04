@@ -28,13 +28,13 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
     elif query.startswith("pyrogram") or query.startswith("telethon"):
         try:
             if query == "pyrogram":
-                await callback_query.answer("» ᴛʜᴇ ᴩʏʀᴏɢʀᴀᴍ ᴠ2 sᴛʀɪɴɢ sᴇssɪᴏɴ ᴡɪʟʟ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ ᴛʜᴇ ʙᴏᴛ's ᴡʜɪᴄʜ ᴀʀᴇ ᴜᴩɢʀᴀᴅᴇᴅ ᴀᴛ ᴩʏʀᴏɢʀᴀᴍ ᴠ2 !", show_alert=True)
+                await callback_query.answer("ᴘʏʀᴏɢʀᴀᴍ ᴠ2 sᴛʀɪɴɢ sᴇssɪᴏɴ ʜᴀɴʏᴀ ᴀᴋᴀɴ ʙᴇʀꜰᴜɴɢsɪ ᴅɪ ʙᴏᴛ ʏᴀɴɢ ᴅɪᴛɪɴɢᴋᴀᴛᴋᴀɴ ᴅɪ ᴘʏʀᴏɢʀᴀᴍ ᴠ2 !", show_alert=True)
                 await generate_session(bot, callback_query.message)
             elif query == "pyrogram1":
                 await callback_query.answer()
                 await generate_session(bot, callback_query.message, old_pyro=True)
             elif query == "pyrogram_bot":
-                await callback_query.answer("» ᴛʜᴇ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴡɪʟʟ ʙᴇ ᴏғ ᴩʏʀᴏɢʀᴀᴍ ᴠ2.", show_alert=True)
+                await callback_query.answer("sᴇsɪ ʏᴀɴɢ ᴅɪʜᴀsɪʟᴋᴀɴ ᴀᴋᴀɴ ᴍᴇɴᴊᴀᴅɪ ᴘʏʀᴏɢʀᴀᴍ ᴠ2.", show_alert=True)
                 await generate_session(bot, callback_query.message, is_bot=True)
             elif query == "telethon_bot":
                 await callback_query.answer()
@@ -48,7 +48,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
 
 
-ERROR_MESSAGE = "ᴡᴛғ ! sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. \n\n**ᴇʀʀᴏʀ** : {} " \
-            "\n\n**ᴩʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ @kenapatagdar**, ɪғ ᴛʜɪs ᴍᴇssᴀɢᴇ " \
-            "ᴅᴏᴇsɴ'ᴛ ᴄᴏɴᴛᴀɪɴ ᴀɴʏ sᴇɴsɪᴛɪᴠᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ " \
-            "ʙᴇᴄᴀᴜsᴇ ᴛʜɪs ᴇʀʀᴏʀ ɪs **ɴᴏᴛ ʟᴏɢɢᴇᴅ ʙʏ ᴛʜᴇ ʙᴏᴛ** !"
+ERROR_MESSAGE = "ᴡᴛғ ! ᴛᴇʀᴊᴀᴅɪ ᴋᴇsᴀʟᴀʜᴀɴ. \n\n**ᴋᴇsᴀʟᴀʜᴀɴ** : {} " \
+            "\n\n**ᴛᴏʟᴏɴɢ ᴋɪʀɪᴍ ᴘᴇsᴀɴ ᴋᴇsᴀʟᴀʜᴀɴ ɪɴɪ ᴋᴇ @kenapatagdar**, ᴊɪᴋᴀ ᴘᴇsᴀɴ ɪɴɪ " \
+            "ᴛɪᴅᴀᴋ ᴍᴇɴɢᴀɴᴅᴜɴɢ ɪɴꜰᴏʀᴍᴀsɪ sᴇɴsɪᴛɪꜰ ᴀᴘᴀ ᴘᴜɴ " \
+            "ᴋᴀʀᴇɴᴀ ᴋᴇsᴀʟᴀʜᴀɴ ɪɴɪ **ᴛɪᴅᴀᴋ ʟᴏɢɪɴ ᴏʟᴇʜ ʙᴏᴛ** !"
