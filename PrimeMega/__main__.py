@@ -85,39 +85,40 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
+✪ I'm an Somed management bot [✨](https://telegra.ph/file/ba582d379f2586f227d66.png)
 ────────────────────────
-I'm a powerful group management bot built to help you manage your group!
-────────────────────
-Hit the /help or tap on button to se available command on Me.
+× *Uptime:* `{}`
+× `{}` *users, across* `{}` *chats.*
+────────────────────────
+✪ Hit /help to see my available commands.
 """
 
 buttons = [
-        [
+    [
         InlineKeyboardButton(
-            text=f"➕️ Add {BOT_NAME} to your group ➕️", url=f"t.me/{BOT_USERNAME}?startgroup=true"
-        ),
+            text="➗ ᴀᴅᴅ sᴏᴍᴇᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➗", url=f"t.me/{bu}?startgroup=new"),
     ],
     [
-        InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_CHAT}"
-        ),
-        InlineKeyboardButton(
-            text="TryInline", switch_inline_query_current_chat=""
-        ),
+        InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
+        InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴜsɪᴄ", callback_data="source_"),  
     ],
     [
-        InlineKeyboardButton(text="Help & Commands❔", callback_data="help_back"
-        ),
+        InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ", callback_data="home"),
+    ],
+    [
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ sᴏᴍᴇᴅ ʀᴏʙᴏᴛ", callback_data="yins_"),
     ],
 ]
+
 
 
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/b9fa4e1360d0a872a3cd5.jpg"
+PRIME_IMG = "https://telegra.ph/file/ba582d379f2586f227d66.png"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Bukan_guudlooking \
+ You can support the project by contacting @kenapatagdar \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
