@@ -1,4 +1,4 @@
-from env import MUST_JOIN
+from config import EVENT_LOGS
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
@@ -6,25 +6,25 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForb
 
 @Client.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
-    if not MUST_JOIN:  # Not compulsory
+    if not EVENT_LOGS:  # Not compulsory
         return
     try:
         try:
-            await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
+            await bot.get_chat_member(EVENT_LOGS, msg.from_user.id)
         except UserNotParticipant:
-            if MUST_JOIN.isalpha():
-                link = "https://t.me/" + MUST_JOIN
+            if EVENT_LOGS.isalpha():
+                link = "https://t.me/" + EVENT_LOGS
             else:
-                chat_info = await bot.get_chat(MUST_JOIN)
+                chat_info = await bot.get_chat(EVENT_LOGS)
                 link = chat_info.invite_link
             try:
-                await msg.reply_photo(photo="https://telegra.ph/file/ba582d379f2586f227d66.png", caption=f"Gabung Group dibawah dulu lalu coba /start lagi!",
+                await msg.reply_photo(photo="https://telegra.ph/file/ba582d379f2586f227d66.png", caption=f"ɢᴀʙᴜɴɢ ɢʀᴜᴘ ᴅɪʙᴀᴡᴀʜ ᴅᴜʟᴜ ʟᴀʟᴜ ᴄᴏʙᴀ /string ʟᴀɢɪ!",
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("🥺 Gabung Group Sini 🥺", url=f"{link}")]
+                        [InlineKeyboardButton("➕️ ɢᴀʙᴜɴɢ ɢʀᴜᴘ sɪɴɪ ➕️", url=f"{link}")]
                     ])
                 )
                 await msg.stop_propagation()
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:
-        print(f"Promote me as an admin in the MUST_JOIN chat : {MUST_JOIN} !")
+        print(f"ᴘʀᴏᴍᴏsɪᴋᴀɴ sᴀʏᴀ sᴇʙᴀɢᴀɪ ᴀᴅᴍɪɴ ᴅɪ MUST_JOIN ᴄʜᴀᴛ : {EVENT_LOGS} !")
