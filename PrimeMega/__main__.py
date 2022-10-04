@@ -82,10 +82,11 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+from PrimeMega.data import Data
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an Somed management bot [✨](https://telegra.ph/file/ba582d379f2586f227d66.png)
+✪ I'm an somed management bot [✨](https://telegra.ph/file/ba582d379f2586f227d66.png)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -96,17 +97,17 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="➗ ᴀᴅᴅ sᴏᴍᴇᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➗", url=f"t.me/{bu}?startgroup=new"),
+        text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
-        InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴜsɪᴄ", callback_data="source_"),  
+        InlineKeyboardButton(text="Help Manage ❓", callback_data="help_back"),
+        InlineKeyboardButton(text="Help Music ❓", callback_data="source_"),
     ],
     [
-        InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ", callback_data="home"),
+        InlineKeyboardButton(text="➗ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ➗", callback_data="Data"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ sᴏᴍᴇᴅ ʀᴏʙᴏᴛ", callback_data="yins_"),
+        InlineKeyboardButton(text="About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
     ],
 ]
 
@@ -397,9 +398,6 @@ def prime_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="prime_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
-                 ],
-                 [
                     InlineKeyboardButton(text="Go Back", callback_data="prime_back"),
                  ]
                 ]
@@ -471,10 +469,13 @@ def prime_about_callback(update, context):
     elif query.data == "prime_credit":
         query.message.edit_text(
             text=f"<b>๏ Credis for primeMega</b>\n"
-            f"\nHere Developers Making The PrimeMegaRobot",
+            f"\nHere Developers Making The SomedRobot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
+                 [
+                    InlineKeyboardButton(text="Somed", url="t.me/kenapatagdar"),
+                 ],
                  [
                     InlineKeyboardButton(text="Tonic", url="t.me/Bukan_guudlooking"),
                     InlineKeyboardButton(text="x~b", url="t.me/Xbarok"),
@@ -491,7 +492,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
+            text="๏›› This advance command for Music."
             "\n\n๏ Command for admins only."
             "\n • `/reload` - For refreshing the adminlist."
             "\n • `/userbotjoin` - For inviting the assistant to your groups."
@@ -504,7 +505,6 @@ def Source_about_callback(update, context):
             "\n • `/vskip` - To skipping the video stream."
             "\n • `/end` - For end the playback."
             "\n • `/vend` - For end the video stream."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
             "\n\n๏ Command for all members."
             "\n • `/play` or `/ytp` <query> - Playing music via YouTube."
             "\n • `/vplay` <query or reply audio> - Playing video from YouTube.",
@@ -513,7 +513,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_")
+                    InlineKeyboardButton(text="Go Back", callback_data="prime_back")
                  ]
                 ]
             ),
