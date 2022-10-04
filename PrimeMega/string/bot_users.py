@@ -1,9 +1,9 @@
 from pyrogram.types import Message
 from pyrogram import Client, filters
 
-from env import OWNER_ID
-from StringGenBot.db import SESSION
-from StringGenBot.db.users_sql import Users, num_users
+from config import OWNER_ID
+from PrimeMega.string.db import SESSION
+from PrimeMega.string.db.users_sql import Users, num_users
 
 
 @Client.on_message(~filters.service, group=1)
