@@ -1,4 +1,4 @@
-from data import Data
+from PrimeMega.data import Data
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
@@ -8,7 +8,7 @@ def filter(cmd: str):
 
 
 # Start Message
-@Client.on_message(filter("start"))
+@Client.on_message(filter("string"))
 async def start(bot: Client, msg: Message):
     user = await bot.get_me()
     mention = user.mention
