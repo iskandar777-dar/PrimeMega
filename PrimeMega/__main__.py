@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-from PrimeMega.data import Data
+from PrimeMega.data import Data 
 
 PM_START_TEXT = """
 *Hello {} !*
