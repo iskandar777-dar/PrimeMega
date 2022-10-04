@@ -1,8 +1,10 @@
 import traceback
-from data import Data
+from PrimeMega.data import Data
 from pyrogram import Client
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
-from StringGenBot.generate import generate_session, ask_ques, buttons_ques
+from PrimeMega.string.generate import generate_session
+from PrimeMega.string.generate import  ask_ques
+from PrimeMega.string.generate import buttons_ques
 
 
 # Callbacks
