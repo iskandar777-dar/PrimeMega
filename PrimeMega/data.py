@@ -1,4 +1,5 @@
 from pyrogram.types import InlineKeyboardButton
+from PrimeMega.string import generate
 
 class Data:
     generate_single_button = [InlineKeyboardButton(" Gёпёяатё $тяїпg ", callback_data="generate")]
@@ -7,14 +8,10 @@ class Data:
 
     buttons = [
         generate_single_button,
-        [
-         InlineKeyboardButton(" sᴜᴩᴩᴏʀᴛ ", url="https://t.me/somedsupport"),
-         InlineKeyboardButton(" ᴅᴇᴠᴇʟᴏᴩᴇʀ ", url="https://t.me/kenapatagdar"),
-        ],
-    ]
+        ]
     
     START = """
-Selamat datang {}
-Bot ini Bekerja Untuk Mendapatkan String Session Via Bot.
-By @kenapatagdar
+sᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ {}
+ʙᴏᴛ ɪɴɪ ʙᴇᴋᴇʀᴊᴀ ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ sᴛʀɪɴɢ sᴇssɪᴏɴ ᴠɪᴀ ʙᴏᴛ sᴏᴍᴇᴅ.
+ʙʏ @kenapatagdar
     """
