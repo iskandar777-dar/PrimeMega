@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-from PrimeMega.data import Data 
+from PrimeMega import data 
 
 PM_START_TEXT = """
 *Hello {} !*
@@ -104,7 +104,7 @@ buttons = [
         InlineKeyboardButton(text="Help Music ❓", callback_data="source_"),
     ],
     [
-        InlineKeyboardButton(text="➗ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ➗", callback_data="Data"),
+        InlineKeyboardButton(text="➗ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ➗", callback_data="data"),
     ],
     [
         InlineKeyboardButton(text="About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
