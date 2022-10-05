@@ -1,4 +1,4 @@
-from PrimeMega.data import Data
+from PrimeMega import data
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
