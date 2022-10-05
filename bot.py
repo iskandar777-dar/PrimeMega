@@ -1,4 +1,4 @@
-import env
+import config
 import logging
 from pyrogram import Client, idle
 from pyromod import listen  # type: ignore
@@ -14,9 +14,8 @@ app = Client(
     api_hash=env.API_HASH,
     bot_token=env.BOT_TOKEN,
     in_memory=True,
-    plugins=dict(root="StringGenBot"),
+    plugins=dict(root="PrimeMega"),
 )
-
 
 if __name__ == "__main__":
     print("Starting the String Generator Bot...")
