@@ -11,6 +11,7 @@ from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
+from PrimeMega.data import ( Data )
 from PrimeMega import (
     ALLOW_EXCL,
     CERT_PATH,
@@ -82,8 +83,6 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-from PrimeMega import data 
-
 PM_START_TEXT = """
 *Hello {} !*
 ✪ I'm an somed management bot [✨](https://telegra.ph/file/ba582d379f2586f227d66.png)
@@ -104,7 +103,7 @@ buttons = [
         InlineKeyboardButton(text="Help Music ❓", callback_data="source_"),
     ],
     [
-        InlineKeyboardButton(text="➗ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ➗", callback_data="data"),
+        InlineKeyboardButton(text="➗ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ➗", callback_data="Data"),
     ],
     [
         InlineKeyboardButton(text="About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
