@@ -9,9 +9,9 @@ logging.basicConfig(
 
 app = Client(
     "bot",
-    api_id=env.API_ID,
-    api_hash=env.API_HASH,
-    bot_token=env.BOT_TOKEN,
+    api_id=config.API_ID,
+    api_hash=config.API_HASH,
+    bot_token=config.BOT_TOKEN,
     in_memory=True,
     plugins=dict(root="PrimeMega"),
 )
