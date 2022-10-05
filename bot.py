@@ -1,4 +1,4 @@
-from PrimeMega import config
+from PrimeMega.config import API_ID, API_HASH, BOT_TOKEN
 import logging
 from pyrogram import Client, idle
 from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvalid
