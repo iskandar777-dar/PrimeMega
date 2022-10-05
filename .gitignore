@@ -151,3 +151,12 @@ dmypy.json
 .pydevproject
 .directory
 .vscode
+
+# string
+.idea/
+__pycache__/
+.gitattributes
+*.pyc
+test.py
+.env
+
