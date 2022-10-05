@@ -1,5 +1,5 @@
 from pyrogram.types import InlineKeyboardButton
-from PrimeMega.string import generate
+from PrimeMega import string
 
 def Data():
     generate_single_button = [InlineKeyboardButton(" Gёпёяатё $тяїпg ", callback_data="generate")]
