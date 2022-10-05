@@ -11,7 +11,6 @@ from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
-from PrimeMega.data import ( Data )
 from PrimeMega import (
     ALLOW_EXCL,
     CERT_PATH,
@@ -85,7 +84,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an somed management bot [✨](https://telegra.ph/file/ba582d379f2586f227d66.png)
+✪ I'm an somed management bot [✨]
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -96,7 +95,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-        text="➗ Add Me To Your Group ➗", url="t.me/{}?startgroup=new"),
+        text="➕️ Add {BOT_NAME} to your group ➕️", url="t.me/{BOT_USERNAME}?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Help Manage ❓", callback_data="help_back"),
@@ -104,9 +103,6 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="➗ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ➗", callback_data="Data"),
-    ],
-    [
-        InlineKeyboardButton(text="About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
     ],
 ]
 
@@ -167,6 +163,24 @@ for module_name in ALL_MODULES:
     if hasattr(imported_module, "__user_settings__"):
         USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
+# string sesi
+from pyrogram.types import InlineKeyboardButton
+from PrimeMega.string import generate
+
+def Data():
+    generate_single_button = [InlineKeyboardButton(" Gёпёяатё $тяїпg ", callback_data="generate")]
+
+    generate_button = [generate_single_button]
+
+    buttons = [
+        generate_single_button,
+        ]
+    
+    START = """
+sᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ {}
+ʙᴏᴛ ɪɴɪ ʙᴇᴋᴇʀᴊᴀ ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ sᴛʀɪɴɢ sᴇssɪᴏɴ ᴠɪᴀ ʙᴏᴛ sᴏᴍᴇᴅ.
+ʙʏ @kenapatagdar
+    """
 
 # do not async
 def send_help(chat_id, text, keyboard=None):
