@@ -1,4 +1,4 @@
-from PrimeMega.data import Data
+from PrimeMega import data
 from pyrogram.types import Message
 from telethon import TelegramClient
 from pyrogram import Client, filters
